@@ -1,0 +1,120 @@
+body{
+    width: 100%;
+    height: 65vh;
+    background: url('../images/login_1.avif') no-repeat;
+    background-position:  0%;
+    background-size: cover;
+    }
+.main {
+  width: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid #eee;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main #header_login {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  background-color: gray;
+  border-radius: 0 0 10px 10px;
+}
+
+#form {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#form input[type="text"],
+#form input[type="password"] {
+  padding: 10px;
+  border: 2px solid white;
+  width: 100%;
+  border-radius: 25px;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.form_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#form label {
+  position: absolute;
+  left: 10px;
+  font-size: .85rem;
+  color: gray;
+  transition: 0.2s;
+}
+
+.remember_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+#form button {
+  border: none;
+  background-color: rgba(0, 208, 255, 0.9);
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+#form input:valid + label,
+#form input:focus + label {
+  background-color: rgb(57, 102, 239);
+  color: black;
+  transform: translate(10px, -20px);
+  padding: 2px 5px;
+  font-size: 8px;
+  border-radius: 4px;
+}
+
+.new_account {
+  text-align: center;
+  color: grey;
+}
+
+#header_login::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  box-shadow: 15px 0 0 0 gray;
+  border-top-right-radius: 50%;
+}
+#header_login::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  box-shadow: -15px 0 0 0 gray;
+  border-top-left-radius: 50%;
+}
